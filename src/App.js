@@ -1,40 +1,19 @@
-import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet, View, Text, StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Stack = createStackNavigator();
+import HomeStack from './screens/home';
+import AboutStack from './screens/about';
 
-const HomeScreen = () => {
-  return (
-    <View style={styles.body}>
-      <Text style={styles.welcomeText}>Welcome</Text>
-    </View>
-  );
-};
+const Tab = createBottomTabNavigator();
 
-const App = () => {
+export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-      </Stack.Navigator>
-      <StatusBar barStyle="dark-content" />
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeStack} />
+        <Tab.Screen name="About" component={AboutStack} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
-};
-
-const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-  },
-  welcomeText: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: '#000000',
-  },
-});
-
-export default App;
+}
