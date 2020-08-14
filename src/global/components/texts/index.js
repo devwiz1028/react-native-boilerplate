@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Text} from 'react-native';
 
-import AnimatableText from '../animatable/AnimatableText';
+import AnimatableText from '../animations/AnimatableText';
 import {Colors, Fonts} from '../../constants';
 
 const CustomText = (props) => {

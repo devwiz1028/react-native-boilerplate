@@ -5,7 +5,7 @@ import HomeMain from './main';
 
 const HomeStack = createStackNavigator();
 
-export default function SettingsStackScreen() {
+export default function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
       <HomeStack.Screen name="HomeMain" component={HomeMain} />

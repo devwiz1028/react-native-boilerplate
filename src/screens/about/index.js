@@ -5,7 +5,7 @@ import AboutMain from './main';
 
 const AboutStack = createStackNavigator();
 
-export default function SettingsStackScreen() {
+export default function AboutStackScreen() {
   return (
     <AboutStack.Navigator>
       <AboutStack.Screen name="AboutMain" component={AboutMain} />
